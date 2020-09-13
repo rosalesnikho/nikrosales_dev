@@ -1,16 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <!--  Landing Header  -->
-    <div class="main-header">
-        <h1>Hello World</h1>
-    </div>
-    <!--  Skill Set  -->
-    <div class="main-content-wrapper">
-        <h1>Hello World</h1>
-    </div>
-    <!--  Contact Me  -->
+<!--  Landing Header  -->
+<div class="main-header">
+    <h1>Hero Section</h1>
 </div>
+<!-- Stack  -->
+<div class="stack-list">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!--  Skill Set  -->
+<div class="main-content-wrapper">
+    <h3 class="section-heading">Software Skills -</h3>
+    <p>Some software stacks I work on</p>
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="" alt="">
+            <h5>CMS Development</h5>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <h5>CMS Development</h5>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <h5>CMS Development</h5>
+        </div>
+    </div>
+</div>
+<!--  Latest Blog Posts  -->
+<div class="latest-blog-posts">
+    <h3 class="section-heading">Articles & Ramblings - </h3>
+    <div class="blog-cards-wrapper">
+        {% for post in object_list %}
+        <div class="blog-card">
+            <h5>{{post.title}} </h5>
+            <img src="{{post.featured_image}}" alt="{{post.title}}">
+            <p>{{post.created_at}} | by: {{post.author.first_name}}</p>
+            <p class="post-excerpt">{{post.post_excerpt}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="contact-me">
+    <h3 class="section-heading">Contact Me Section</h3>
+</div>
+<!--  Contact Me  -->
 {% endblock %}
 

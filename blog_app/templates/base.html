@@ -4,13 +4,31 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/penrose.css' %}">
-    <link rel="stylesheet" href="{% static 'css/sthle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lato&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Base HTML / Commons</title>
 </head>
 <body>
-{% block content %}
+<div class="container">
+    <div class="main-wrapper">
+        <header>
+            <nav class="top-nav">
+                <img class="nav-logo" src="img/logo.png" alt="nikrosales.dev logo ">
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Work</li>
+                    <li>Blog</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+        </header>
+        {% block content %}
 
-{% endblock %}
+        {% endblock %}
+    </div>
+</div>
 </body>
 </html>
